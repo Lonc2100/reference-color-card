@@ -1,0 +1,50 @@
+{
+  "positive_concepts": {
+    "task": [
+      "色卡",
+      "提取颜色"
+    ],
+    "input": [
+      "原图",
+      "照片",
+      "电影帧"
+    ],
+    "output": [
+      "HEX",
+      "PNG",
+      "取色"
+    ]
+  },
+  "description_required_concepts": [
+    "task",
+    "input",
+    "output"
+  ],
+  "recommended_threshold": 0.34,
+  "negative_patterns": [
+    "只做普通抠图",
+    "写一首诗",
+    "给视频加字幕"
+  ],
+  "should_trigger": [
+    {
+      "text": "请使用 reference-color-card，从这张原图提取独立PNG色卡，附HEX和可追溯取样JSON，排除浏览器边框。"
+    },
+    {
+      "text": "照片提取色卡，输出HEX与PNG"
+    }
+  ],
+  "should_not_trigger": [
+    {
+      "text": "写一首诗"
+    },
+    {
+      "text": "给视频加字幕"
+    }
+  ],
+  "near_neighbor": [
+    {
+      "text": "只做普通抠图"
+    }
+  ]
+}

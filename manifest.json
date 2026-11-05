@@ -1,0 +1,21 @@
+{
+  "name": "reference-color-card",
+  "version": "0.1.0",
+  "owner": "Lonc2100",
+  "updated_at": "2026-11-05",
+  "status": "personal-pilot",
+  "maturity_tier": "scaffold",
+  "publication_status": "public-preview",
+  "release_gates": [
+    "package validation",
+    "secret scan",
+    "feature PR merge",
+    "versioned release",
+    "clean install"
+  ],
+  "intent": {
+    "target_users": [
+      "AI video creators using local agent skills"
+    ]
+  }
+}
