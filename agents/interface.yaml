@@ -1,0 +1,7 @@
+interface:
+  display_name: "参考图提取色卡"
+  short_description: "从原图提取白底网格色卡PNG及HEX"
+  default_prompt: "使用$reference-color-card，按当前作者确认的原图和要求完成并验证输出。"
+compatibility:
+  adapter_targets: [openai, claude, generic, agent-skills-compatible]
+  verification_status: "format targets only; client execution is not verified"

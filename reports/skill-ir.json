@@ -1,0 +1,77 @@
+{
+  "schema_version": "2.0.0-qiaomu-lite",
+  "generated_at": "2026-11-05",
+  "package": {
+    "name": "reference-color-card",
+    "version": "0.1.0",
+    "owner": "Lonc2100",
+    "maturity_tier": "scaffold",
+    "lifecycle_stage": null,
+    "upstream_inspiration": null,
+    "upstream_sync": {}
+  },
+  "intent": {
+    "description": "从指定电影帧、照片或环境图提取真实颜色，制作白底色块网格及HEX编号的独立PNG色卡参考图，附可追溯取色JSON。用于“提取色卡”“做这种色卡参考图”“给生成模型一张配色图”；不代替洗图综合色块图、LUT或最终调色，不凭印象编造颜色。",
+    "job_to_be_done": "从指定电影帧、照片或环境图提取真实颜色，制作白底色块网格及HEX编号的独立PNG色卡参考图，附可追溯取色JSON。用于“提取色卡”“做这种色卡参考图”“给生成模型一张配色图”；不代替洗图综合色块图、LUT或最终调色，不凭印象编造颜色。",
+    "target_users": [
+      "AI video creators using local agent skills"
+    ],
+    "inputs": [],
+    "outputs": [],
+    "exclusions": [],
+    "qiaomu_defaults": {}
+  },
+  "triggers": {
+    "should_trigger": [
+      "请使用 reference-color-card，从这张原图提取独立PNG色卡，附HEX和可追溯取样JSON，排除浏览器边框。",
+      "照片提取色卡，输出HEX与PNG"
+    ],
+    "should_not_trigger": [
+      "写一首诗",
+      "给视频加字幕"
+    ],
+    "near_neighbor": [
+      "只做普通抠图"
+    ]
+  },
+  "workflow": {
+    "router_rules": [],
+    "compact_workflow": [],
+    "gate_ladder": [],
+    "output_contract": []
+  },
+  "resources": {
+    "references": [],
+    "scripts": [
+      "scripts\\extract_card.py"
+    ],
+    "evals": [
+      "evals\\trigger_cases.json"
+    ],
+    "reports": [
+      "reports\\skill-ir.json",
+      "reports\\trigger-eval.json"
+    ]
+  },
+  "portability": {
+    "canonical_format": null,
+    "adapter_targets": [
+      "openai",
+      "claude",
+      "generic",
+      "agent-skills-compatible"
+    ],
+    "activation": {},
+    "execution": {},
+    "trust": {},
+    "permissions": {},
+    "degradation": {}
+  },
+  "gates": {},
+  "evidence_boundary": {
+    "generated_reports_are_evidence": true,
+    "planned_work_is_evidence": false,
+    "missing_external_or_human_evidence_label": "missing evidence",
+    "public_claim_policy": "claim only what local validation, install proof, human review, or provider-backed evidence actually supports"
+  }
+}
